@@ -1,0 +1,84 @@
+/* model-viewer layout styles (adapted from sjingjia.github.io) */
+
+.mv-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mv-row-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5vh;
+}
+
+.mv-row-header .mv-col {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #363636;
+  padding-right: 10px;
+  width: 33.33%;
+}
+
+.mv-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5vh;
+}
+
+.mv-col {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  width: 33.33%;
+  box-sizing: border-box;
+}
+
+.mv-row .mv-col:last-child,
+.mv-row-header .mv-col:last-child {
+  padding-right: 0;
+}
+
+.mv-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #555;
+  border-radius: 8px;
+  width: 100%;
+  height: 320px;
+  background-color: #2a2a2a;
+  transition: border-color 0.2s ease;
+}
+
+.mv-card:hover {
+  border-color: hsl(204, 86%, 53%);
+}
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+  --poster-color: #2a2a2a;
+}
+
+.mv-card canvas:not(model-viewer) {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mv-row,
+  .mv-row-header {
+    flex-direction: column;
+  }
+  .mv-col {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+  .mv-card {
+    height: 280px;
+  }
+}
