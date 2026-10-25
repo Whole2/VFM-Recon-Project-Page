@@ -36,32 +36,36 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Yuhang Ming</a><sup>1,2</sup>
+              <a href="">Yuhang Ming</a><sup>1,2,*</sup>
             </span>&nbsp;&nbsp;
             <span class="author-block">
-              <a href="">Tingkang Xi</a><sup>2</sup>
+              <a href="">Tingkang Xi</a><sup>1,*</sup>
             </span>&nbsp;&nbsp;
             <span class="author-block">
-              <a href="">Xingrui Yang</a><sup>3</sup>
+              <a href="">Xingrui Yang</a><sup>3,*</sup>
             </span>&nbsp;&nbsp;
             <span class="author-block">
-              <a href="">Lixin Yang</a><sup>1</sup>
+              <a href="">Lixin Yang</a><sup>2</sup>
             </span>&nbsp;&nbsp;
             <span class="author-block">
-              <a href="">Yong Peng</a><sup>2,&#9993;</sup>
+              <a href="">Yong Peng</a><sup>1,&#9993;</sup>
             </span>&nbsp;&nbsp;
             <span class="author-block">
-              <a href="">Cewu Lu</a><sup>1</sup>
+              <a href="">Cewu Lu</a><sup>2</sup>
             </span>&nbsp;&nbsp;
             <span class="author-block">
-              <a href="">Wanzeng Kong</a><sup>2</sup>
+              <a href="">Wanzeng Kong</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University</span>&nbsp;&nbsp;
-            <span class="author-block"><sup>2</sup>Hangzhou Dianzi University</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>1</sup>Hangzhou Dianzi University</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>&nbsp;&nbsp;
             <span class="author-block"><sup>3</sup>CARDC</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
           </div>
 
           <div class="column has-text-centered">
@@ -119,7 +123,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Scene-level neural volumetric reconstruction from monocular videos remains challenging, especially under severe domain shifts. Although recent advances in vision foundation models (VFMs) provide transferable generalized priors learned from large-scale data, their scale-ambiguous predictions are incompatible with the scale consistency required by volumetric fusion. To address this gap, we present <b>VFM-Recon</b>, the first attempt to bridge transferable VFM priors with scale-consistent requirements in scene-level neural reconstruction. Specifically, we first introduce a lightweight scale alignment stage that restores multiview scale coherence. We then integrate pretrained VFM features into the neural volumetric reconstruction pipeline via lightweight task-specific adapters, which are trained for reconstruction while preserving the cross-domain robustness of pretrained representations. We train our model on ScanNet train split and evaluate on both in-distribution ScanNet test split and out-of-distribution TUM RGB-D and Tanks and Temples datasets. The results demonstrate that our model achieves state-of-the-art performance across all datasets domains. In particular, on the challenging outdoor Tanks and Temples dataset, our model achieves an F1 score of 70.1 in reconstructed mesh evaluation, substantially outperforming the closest competitor, VGGT, which only attains 51.8.
+            Scene-level neural volumetric reconstruction from monocular videos remains challenging, especially under severe domain shifts. Although recent advances in vision foundation models (VFMs) provide transferable generalized priors learned from large-scale data, their scale-ambiguous predictions are incompatible with the scale consistency required by volumetric fusion. To address this gap, we present <b>VFM-Recon</b>, the first attempt to bridge transferable VFM priors with scale-consistent requirements in scene-level neural reconstruction. Specifically, we first introduce a lightweight scale alignment stage that restores multi-view scale coherence. We then integrate pretrained VFM features into the neural volumetric reconstruction pipeline via lightweight task-specific adapters, which are trained for reconstruction while preserving the cross-domain robustness of pretrained representations. We train our model on ScanNet train split and evaluate on both in-distribution ScanNet test split and out-of-distribution TUM RGBD and Tanks and Temples datasets. The results demonstrate that our model achieves state-of-the-art performance across all dataset domains. In particular, on the challenging outdoor Tanks and Temples dataset, our model achieves an F1 score of 73.5 in reconstructed mesh evaluation, substantially outperforming the closest neural volumetric reconstruction competitor, SimpleRecon, with an F1 score of 35.7, as well as the closest VFM competitor, π<sup>3</sup>, with an F1 score of 67.0.
           </p>
         </div>
       </div>
